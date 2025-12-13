@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyl6qq88a2ena"]
+
+[ext_resource type="Texture2D" uid="uid://d1pjc2wvhabxs" path="res://assets/spritesheets/Tilesets - Sweetheart's Castle.png" id="1_xfvdi"]
+
+[node name="gate" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.86102e-06, 8)
+texture = ExtResource("1_xfvdi")
+region_enabled = true
+region_rect = Rect2(1568, 1040, 96, 80)

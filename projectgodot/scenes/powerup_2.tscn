@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://vsb7va1quinu"]
+
+[ext_resource type="Script" uid="uid://bgi52v1t1spyl" path="res://scripts/powerup_2.gd" id="1_nb6yh"]
+[ext_resource type="Texture2D" uid="uid://d1pjc2wvhabxs" path="res://assets/spritesheets/Tilesets - Sweetheart's Castle.png" id="2_p50er"]
+[ext_resource type="AudioStream" uid="uid://b4w00dbq3dj31" path="res://assets/audio/pickupCoin (2).wav" id="3_8wwgm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_42302"]
+radius = 8.0
+height = 16.0
+
+[node name="powerup2" type="Area2D"]
+script = ExtResource("1_nb6yh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_p50er")
+region_enabled = true
+region_rect = Rect2(160, 640, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_42302")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8wwgm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

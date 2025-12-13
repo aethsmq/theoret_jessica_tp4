@@ -1,0 +1,98 @@
+[gd_scene load_steps=4 format=3 uid="uid://b30i01rruns1g"]
+
+[ext_resource type="Texture2D" uid="uid://s8c3pfxb3ght" path="res://assets/background/flowerpot2.png" id="1_ve6ub"]
+[ext_resource type="Script" uid="uid://1igtalu41n80" path="res://scripts/replay_menu.gd" id="1_wqf8q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbhqb"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="replay_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wqf8q")
+
+[node name="Flowerpot2" type="Sprite2D" parent="."]
+position = Vector2(960, 416)
+texture = ExtResource("1_ve6ub")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -507.0
+offset_top = -198.5
+offset_right = 507.0
+offset_bottom = 198.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.741176)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -492.0
+offset_top = -179.5
+offset_right = 492.0
+offset_bottom = 179.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.572549, 0.294118, 0.976471, 0.686275)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.498
+anchor_top = 0.407
+anchor_right = 0.498
+anchor_bottom = 0.407
+offset_left = -141.696
+offset_top = 8.26401
+offset_right = 150.304
+offset_bottom = 88.264
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.290196, 0.176471, 0.45098, 1)
+theme_override_constants/line_spacing = 2
+theme_override_font_sizes/font_size = 50
+text = "YOU DID IT!!"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.0
+offset_top = 60.0
+offset_right = 75.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="replay" type="Button" parent="MarginContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.290196, 0.176471, 0.45098, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_gbhqb")
+text = "replay
+"
+
+[connection signal="pressed" from="MarginContainer/replay" to="." method="_on_replay_pressed"]

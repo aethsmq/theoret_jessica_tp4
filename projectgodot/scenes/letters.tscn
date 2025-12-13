@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3glxmsjibl02"]
+
+[ext_resource type="Texture2D" uid="uid://d1pjc2wvhabxs" path="res://assets/spritesheets/Tilesets - Sweetheart's Castle.png" id="1_id4sl"]
+
+[node name="letters" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 48.0
+offset_top = -24.0
+offset_right = 88.0
+offset_bottom = 21.0
+theme_override_font_sizes/font_size = 32
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_id4sl")
+region_enabled = true
+region_rect = Rect2(160, 648, 32, 24)

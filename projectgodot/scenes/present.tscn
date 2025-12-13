@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://hqf28yetks3w"]
+
+[ext_resource type="Texture2D" uid="uid://dywol3bnygxiv" path="res://assets/spritesheets/present powerup.png" id="1_8juob"]
+
+[node name="present" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 48.0
+offset_top = -24.0
+offset_right = 88.0
+offset_bottom = 21.0
+theme_override_font_sizes/font_size = 32
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_8juob")

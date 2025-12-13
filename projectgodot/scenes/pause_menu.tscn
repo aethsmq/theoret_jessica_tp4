@@ -1,0 +1,110 @@
+[gd_scene load_steps=8 format=3 uid="uid://ch4ie6w584qrc"]
+
+[ext_resource type="Script" uid="uid://k5sq7ojd5xn6" path="res://scripts/pause_menu.gd" id="1_myx47"]
+[ext_resource type="Texture2D" uid="uid://b1vio7lrwp1pp" path="res://assets/background/flowerpot.png" id="2_myx47"]
+[ext_resource type="Texture2D" uid="uid://4w87o3p6vfvx" path="res://assets/background/Aubrey’s dreamlands!.png" id="3_kukqi"]
+[ext_resource type="AudioStream" uid="uid://cnukd1d2v6w7o" path="res://assets/audio/OMORI OST - Lost, Then Found!.mp3" id="4_5d2l8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5d2l8"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7l7mv"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4r4p"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="pause menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_myx47")
+
+[node name="Flowerpot2" type="Sprite2D" parent="."]
+position = Vector2(12.5, 3.99999)
+scale = Vector2(1.0224, 1.05185)
+texture = ExtResource("2_myx47")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -504.0
+offset_top = -133.0
+offset_right = 510.0
+offset_bottom = 264.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.741176)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+offset_left = -488.0
+offset_top = -115.0
+offset_right = 496.0
+offset_bottom = 244.0
+color = Color(0.572549, 0.294118, 0.976471, 0.686275)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -140.0
+offset_top = -111.0
+offset_right = 140.0
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 8
+
+[node name="continuer" type="Button" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.290196, 0.176471, 0.45098, 1)
+theme_override_constants/outline_size = 2
+theme_override_constants/align_to_largest_stylebox = 1
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_5d2l8")
+text = "play"
+
+[node name="how to play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.290196, 0.176471, 0.45098, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_7l7mv")
+text = "how to play"
+
+[node name="settings" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.290196, 0.176471, 0.45098, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_v4r4p")
+text = "settings"
+
+[node name="Aubrey’sDreamlands!" type="Sprite2D" parent="."]
+position = Vector2(36, -281)
+scale = Vector2(1.13586, 1.26508)
+texture = ExtResource("3_kukqi")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_5d2l8")
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/continuer" to="." method="_on_continuer_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/how to play" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/settings" to="." method="_on_settings_pressed"]

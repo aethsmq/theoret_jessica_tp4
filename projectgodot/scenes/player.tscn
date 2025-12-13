@@ -1,0 +1,121 @@
+[gd_scene load_steps=19 format=3 uid="uid://pwtjv1goq7xo"]
+
+[ext_resource type="Texture2D" uid="uid://dljhyd5x7fhux" path="res://assets/spritesheets/aubrey walkingback1.png" id="1_3v2ag"]
+[ext_resource type="Script" uid="uid://ddfojc151a3n5" path="res://scripts/player.gd" id="1_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://djbwk5aptppfl" path="res://assets/spritesheets/aubrey idle2.png" id="2_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://c6c8ghupxso71" path="res://assets/spritesheets/aubrey walkingback2.png" id="2_jej6c"]
+[ext_resource type="Texture2D" uid="uid://boceujqwnp8l3" path="res://assets/spritesheets/aubrey walkingback3.png" id="3_f1ej7"]
+[ext_resource type="Texture2D" uid="uid://cf2bio5rw8mwb" path="res://assets/spritesheets/aubrey idle3.png" id="3_qfm1y"]
+[ext_resource type="Texture2D" uid="uid://ble6jv10ot80q" path="res://assets/spritesheets/aubrey idle1.png" id="4_fulsm"]
+[ext_resource type="Texture2D" uid="uid://uwp7rrp324yd" path="res://assets/spritesheets/aubrey walkingfront1.png" id="4_oprun"]
+[ext_resource type="Texture2D" uid="uid://bihrjd5onwb41" path="res://assets/spritesheets/aubrey walkingfront2.png" id="5_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://cmmpcdkr6wl81" path="res://assets/spritesheets/aubrey walkingfront3.png" id="6_qfm1y"]
+[ext_resource type="Texture2D" uid="uid://hhqlwhxk06t0" path="res://assets/spritesheets/aubrey walkingleft1.png" id="7_fulsm"]
+[ext_resource type="Texture2D" uid="uid://c3xguvsx7ubwh" path="res://assets/spritesheets/aubrey walkingleft2.png" id="8_4r5pv"]
+[ext_resource type="Texture2D" uid="uid://cn7ph7ityg13r" path="res://assets/spritesheets/aubrey walkingleft3.png" id="9_60mlk"]
+[ext_resource type="Texture2D" uid="uid://nv8e8g17rclh" path="res://assets/spritesheets/aubrey walkingright1.png" id="10_i4ail"]
+[ext_resource type="Texture2D" uid="uid://dcdufwyxt45my" path="res://assets/spritesheets/aubrey walkingright2.png" id="11_a38lo"]
+[ext_resource type="Texture2D" uid="uid://gt1eqr6m7lga" path="res://assets/spritesheets/aubrey walkingright3.png" id="12_4ni07"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l71n6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3v2ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jej6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_f1ej7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jej6c")
+}],
+"loop": true,
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_oprun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a8ls1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qfm1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a8ls1")
+}],
+"loop": true,
+"name": &"front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_a8ls1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qfm1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_a8ls1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fulsm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_fulsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4r5pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_60mlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4r5pv")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_i4ail")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_a38lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4ni07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_a38lo")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ke2ow"]
+radius = 8.0
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_a8ls1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.19209e-06, -2.38419e-07)
+sprite_frames = SubResource("SpriteFrames_l71n6")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ke2ow")
