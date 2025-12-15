@@ -23,3 +23,5 @@ func _on_timer_timeout():
 	timer.stop()
 	label.text = "RESTARTING..."
 	get_tree().reload_current_scene()
+
+# Replace with function body.

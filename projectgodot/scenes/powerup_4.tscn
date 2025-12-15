@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://citceb04iqo5a"]
+
+[ext_resource type="Script" uid="uid://b3vcecq4g6sca" path="res://scripts/powerup_4.gd" id="1_5ck2p"]
+[ext_resource type="Texture2D" uid="uid://b7upuc1hvu6ta" path="res://assets/spritesheets/Omori - Tilesets - Snowglobe Mountain.png" id="2_b6kd5"]
+[ext_resource type="AudioStream" uid="uid://454hkf30yqn1" path="res://assets/audio/pickupCoin (1).wav" id="3_b6kd5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_03wsu"]
+
+[node name="powerup_4" type="Area2D"]
+script = ExtResource("1_5ck2p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_03wsu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_b6kd5")
+region_enabled = true
+region_rect = Rect2(352, 480, 32, 24)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_b6kd5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

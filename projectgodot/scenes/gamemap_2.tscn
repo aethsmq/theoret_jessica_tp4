@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://dxbn3pxck05xu"]
+[gd_scene load_steps=44 format=4 uid="uid://dxbn3pxck05xu"]
 
 [ext_resource type="Texture2D" uid="uid://cj4857rfb3dot" path="res://assets/spritesheets/Tilesets - Vast Forest.png" id="1_e1jk2"]
 [ext_resource type="PackedScene" uid="uid://pwtjv1goq7xo" path="res://scenes/player.tscn" id="2_2gplu"]
@@ -10,9 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://d3glxmsjibl02" path="res://scenes/letters.tscn" id="6_wjuch"]
 [ext_resource type="Script" uid="uid://pd3kjhq7e6s7" path="res://scripts/time.gd" id="9_yxlm0"]
 [ext_resource type="Texture2D" uid="uid://dkacm37rf4cps" path="res://assets/spritesheets/Omori - Kel.png" id="10_4pslx"]
+[ext_resource type="Texture2D" uid="uid://b2shf1r1ipxmf" path="res://assets/sprites/VAN.webp" id="10_q1ojh"]
+[ext_resource type="Texture2D" uid="uid://ds5qydi4x66jx" path="res://assets/sprites/SHAWN.webp" id="11_3r36i"]
 [ext_resource type="Texture2D" uid="uid://b0jaeeke1n6gv" path="res://assets/spritesheets/Omori - Hero.png" id="11_rkhar"]
 [ext_resource type="Texture2D" uid="uid://bnxghvwl1d6sc" path="res://assets/spritesheets/Omori - Mari.png" id="12_rkhar"]
+[ext_resource type="Texture2D" uid="uid://cxyip0k23k7s3" path="res://assets/sprites/DAISY.webp" id="12_xac8p"]
 [ext_resource type="Texture2D" uid="uid://dyxt7al2q6lkw" path="res://assets/spritesheets/Omori - Basil.png" id="13_bhdpd"]
+[ext_resource type="Texture2D" uid="uid://b54n0nbvpowq3" path="res://assets/sprites/BERLY.webp" id="13_ny2e8"]
 
 [sub_resource type="GDScript" id="GDScript_2gplu"]
 script/source = "extends Node2D
@@ -398,7 +402,7 @@ region_rect = Rect2(128, 0, 32, 32)
 position = Vector2(864, 217)
 
 [node name="player" parent="." instance=ExtResource("2_2gplu")]
-position = Vector2(504, 584)
+position = Vector2(464, 224)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 offset = Vector2(1, 1)
@@ -562,6 +566,23 @@ metadata/_edit_use_anchors_ = true
 wait_time = 60.0
 one_shot = true
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(572, 803.25)
+scale = Vector2(0.437499, 0.425782)
+texture = ExtResource("10_q1ojh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(-356.572, 311.779)
+texture = ExtResource("11_3r36i")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2/Sprite2D"]
+position = Vector2(-73.143, 18.789)
+texture = ExtResource("12_xac8p")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2/Sprite2D/Sprite2D"]
+position = Vector2(1170.29, -1070.97)
+texture = ExtResource("13_ny2e8")
+
 [node name="kel" type="AnimatedSprite2D" parent="."]
 position = Vector2(408, 272)
 sprite_frames = SubResource("SpriteFrames_xac8p")
@@ -582,7 +603,7 @@ animation = &"mari"
 autoplay = "mari"
 frame_progress = 0.725911
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="basil" type="AnimatedSprite2D" parent="."]
 position = Vector2(144, 624)
 sprite_frames = SubResource("SpriteFrames_lrl1q")
 animation = &"basil"

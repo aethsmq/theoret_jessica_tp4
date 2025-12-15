@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://bl2vk847q8ix1"]
+[gd_scene load_steps=29 format=4 uid="uid://bl2vk847q8ix1"]
 
 [ext_resource type="Script" uid="uid://ccoh1jklkg5gw" path="res://scripts/gamemap_1.gd" id="1_1ktfh"]
 [ext_resource type="Texture2D" uid="uid://bpnptib447tn2" path="res://assets/background/space background.webp" id="2_iwmkq"]
@@ -6,10 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://pwtjv1goq7xo" path="res://scenes/player.tscn" id="4_wm00t"]
 [ext_resource type="AudioStream" uid="uid://cg50ue2pqn2s4" path="res://assets/audio/omori ost.wav" id="5_0vwfa"]
 [ext_resource type="Script" uid="uid://dri7736cya1jw" path="res://scripts/audio_stream_player_2d.gd" id="6_3pak0"]
-[ext_resource type="PackedScene" uid="uid://bsc7wyaji7200" path="res://scenes/key.tscn" id="6_iwmkq"]
 [ext_resource type="PackedScene" uid="uid://dic0bjs576scd" path="res://scenes/powerup.tscn" id="7_xjss1"]
 [ext_resource type="Script" uid="uid://dc5bxvg400gtm" path="res://scripts/area_2d.gd" id="8_1ktfh"]
-[ext_resource type="PackedScene" uid="uid://b71vrjpvna53m" path="res://scenes/television.tscn" id="8_7mdys"]
 [ext_resource type="Script" uid="uid://bxd8f34hd8i4i" path="res://scripts/game_manager.gd" id="9_dg31i"]
 [ext_resource type="PackedScene" uid="uid://hqf28yetks3w" path="res://scenes/present.tscn" id="12_0vwfa"]
 [ext_resource type="Script" uid="uid://dv1vfp0a1gggp" path="res://scripts/time_3.gd" id="13_wm00t"]
@@ -1533,9 +1531,6 @@ position = Vector2(368, 360)
 [node name="powerup8" parent="." instance=ExtResource("7_xjss1")]
 position = Vector2(728, 464)
 
-[node name="television" parent="." instance=ExtResource("8_7mdys")]
-position = Vector2(760, 552)
-
 [node name="powerup9" parent="." instance=ExtResource("7_xjss1")]
 position = Vector2(656, 408)
 
@@ -1559,9 +1554,6 @@ position = Vector2(504, 368)
 
 [node name="powerup16" parent="." instance=ExtResource("7_xjss1")]
 position = Vector2(712, 576)
-
-[node name="key" parent="." instance=ExtResource("6_iwmkq")]
-position = Vector2(368, 326)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1608,28 +1600,28 @@ text = "0:00"
 [node name="Timer" type="Timer" parent="CanvasLayer/time3"]
 wait_time = 25.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Mari" type="AnimatedSprite2D" parent="."]
 position = Vector2(536, 313)
 sprite_frames = SubResource("SpriteFrames_0vwfa")
 animation = &"mari"
 autoplay = "mari"
 frame_progress = 0.245692
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+[node name="kel" type="AnimatedSprite2D" parent="."]
 position = Vector2(496, 313)
 sprite_frames = SubResource("SpriteFrames_7mdys")
 animation = &"kel"
 autoplay = "kel"
 frame_progress = 0.119332
 
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+[node name="basil" type="AnimatedSprite2D" parent="."]
 position = Vector2(616, 313)
 sprite_frames = SubResource("SpriteFrames_rcpin")
 animation = &"basil"
 autoplay = "basil"
 frame_progress = 0.245714
 
-[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+[node name="hero" type="AnimatedSprite2D" parent="."]
 position = Vector2(576, 313)
 sprite_frames = SubResource("SpriteFrames_0lnls")
 animation = &"hero"
@@ -1637,4 +1629,3 @@ autoplay = "hero"
 frame_progress = 0.911445
 
 [connection signal="body_entered" from="Sprite2D/porte" to="Sprite2D/porte" method="_on_body_entered"]
-[connection signal="body_entered" from="key" to="." method="_on_key_body_entered"]

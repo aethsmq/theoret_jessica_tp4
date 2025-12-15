@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://blrvul4p5uyw2"]
+
+[ext_resource type="Texture2D" uid="uid://b7upuc1hvu6ta" path="res://assets/spritesheets/Omori - Tilesets - Snowglobe Mountain.png" id="1_4dymq"]
+
+[node name="snowflake" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -27.0
+offset_top = -24.0
+offset_right = 30.0
+offset_bottom = 33.0
+color = Color(0, 0, 0, 0.223529)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_4dymq")
+region_enabled = true
+region_rect = Rect2(352, 480, 32, 24)
