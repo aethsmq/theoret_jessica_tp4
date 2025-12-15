@@ -620,27 +620,27 @@ position = Vector2(1048, 360)
 sprite_frames = SubResource("SpriteFrames_uw7sa")
 animation = &"relaxing"
 autoplay = "relaxing"
-frame_progress = 0.958379
+frame_progress = 0.870149
 
 [node name="hero" type="AnimatedSprite2D" parent="."]
 position = Vector2(368, 352)
 sprite_frames = SubResource("SpriteFrames_novow")
 autoplay = "default"
-frame_progress = 0.5365
+frame_progress = 0.709523
 
 [node name="basil" type="AnimatedSprite2D" parent="."]
 position = Vector2(984, 888)
 sprite_frames = SubResource("SpriteFrames_oce3m")
 animation = &"basil"
 autoplay = "basil"
-frame_progress = 0.612716
+frame_progress = 0.924553
 
 [node name="mari" type="AnimatedSprite2D" parent="."]
 position = Vector2(408, 320)
 sprite_frames = SubResource("SpriteFrames_e2504")
 animation = &"mari"
 autoplay = "mari"
-frame_progress = 0.417075
+frame_progress = 0.590082
 
 [node name="player" parent="." instance=ExtResource("6_jtaop")]
 position = Vector2(392, 384)
@@ -786,7 +786,7 @@ autoplay = true
 polygon = PackedVector2Array(152, 840, 96, 936, 96, 1080, 216, 1096, 328, 1144, 448, 1184, 632, 1184, 784, 1176, 840, 1088, 912, 1072, 952, 1016, 1048, 1016, 1120, 960, 1160, 936, 1152, 704, 1120, 696, 1104, 632, 1040, 632, 1008, 600, 1048, 568, 1048, 528, 1168, 528, 1168, 232, 1152, 288, 1120, 288, 1120, 224, 1048, 216, 1056, 320, 960, 320, 960, 232, 880, 232, 872, 296, 824, 328, 776, 296, 696, 248, 696, 160, 528, 160, 528, 208, 504, 208, 504, 96, 432, 96, 424, 160, 344, 168, 200, 168, 192, 256, 256, 256, 272, 296, 208, 312, 200, 392, 200, 432, 240, 448, 224, 496, 184, 496, 160, 416, 152, 488, 128, 496, 112, 496, 104, 496, 96, 520, 136, 536, 136, 568, 80, 648, 72, 752, 144, 832, -56, 928, -64, 80, -64, 24, 1248, 40, 1224, 1016, 1224, 1208, 8, 1208, -56, 944)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="collisions"]
-polygon = PackedVector2Array(824, 752, 824, 800, 864, 800, 864, 856, 824, 872, 760, 872, 760, 904, 696, 904, 696, 936, 328, 936, 328, 872, 296, 872, 296, 912, 256, 912, 256, 864, 224, 864, 224, 896, 208, 896, 200, 864, 200, 840, 144, 840, 160, 744, 808, 744, 808, 760, 176, 760, 176, 816, 224, 816, 224, 848, 336, 848, 344, 912, 672, 912, 672, 880, 736, 880, 744, 848, 808, 848, 808, 744, 824, 744)
+polygon = PackedVector2Array(832, 752, 832, 800, 864, 800, 864, 856, 824, 872, 760, 872, 760, 904, 696, 904, 696, 936, 328, 936, 328, 872, 296, 872, 296, 912, 256, 912, 256, 864, 224, 864, 224, 896, 208, 896, 200, 864, 200, 840, 144, 840, 160, 744, 808, 744, 808, 760, 176, 760, 176, 816, 224, 816, 224, 848, 336, 848, 344, 912, 672, 912, 672, 880, 736, 880, 744, 848, 808, 848, 808, 744, 832, 744)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

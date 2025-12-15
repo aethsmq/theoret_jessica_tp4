@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="white space"
+config/name="aubrey's aventure!"
 run/main_scene="uid://ch4ie6w584qrc"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
