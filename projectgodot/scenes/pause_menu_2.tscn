@@ -65,11 +65,10 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "menu = esc
-bouger = flèches
+move = flèches
 
-but du jeux:
-prends tous les objets dans les differents 
-mondes!!"
+Game rules:
+take all the objects before the time goes up!!"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

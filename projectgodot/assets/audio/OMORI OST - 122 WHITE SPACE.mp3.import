@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmvt84h4r75ic"
+path="res://.godot/imported/OMORI OST - 122 WHITE SPACE.mp3-d4c7fd952259a536bd6f6bdb49f476bc.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/OMORI OST - 122 WHITE SPACE.mp3"
+dest_files=["res://.godot/imported/OMORI OST - 122 WHITE SPACE.mp3-d4c7fd952259a536bd6f6bdb49f476bc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://bl2vk847q8ix1"]
+[gd_scene load_steps=31 format=4 uid="uid://bl2vk847q8ix1"]
 
 [ext_resource type="Script" uid="uid://ccoh1jklkg5gw" path="res://scripts/gamemap_1.gd" id="1_1ktfh"]
 [ext_resource type="Texture2D" uid="uid://bpnptib447tn2" path="res://assets/background/space background.webp" id="2_iwmkq"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b71vrjpvna53m" path="res://scenes/television.tscn" id="8_7mdys"]
 [ext_resource type="Script" uid="uid://bxd8f34hd8i4i" path="res://scripts/game_manager.gd" id="9_dg31i"]
 [ext_resource type="PackedScene" uid="uid://hqf28yetks3w" path="res://scenes/present.tscn" id="12_0vwfa"]
+[ext_resource type="Script" uid="uid://dv1vfp0a1gggp" path="res://scripts/time_3.gd" id="13_wm00t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aboh2"]
 texture = ExtResource("3_sktk1")
@@ -1325,7 +1326,96 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_2c627"]
 sources/0 = SubResource("TileSetAtlasSource_nduwo")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_sktk1"]
+atlas = ExtResource("3_sktk1")
+region = Rect2(256, 224, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wm00t"]
+atlas = ExtResource("3_sktk1")
+region = Rect2(352, 288, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0vwfa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sktk1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wm00t")
+}],
+"loop": true,
+"name": &"mari",
+"speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pak0"]
+atlas = ExtResource("3_sktk1")
+region = Rect2(320, 224, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjss1"]
+atlas = ExtResource("3_sktk1")
+region = Rect2(416, 288, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7mdys"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pak0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjss1")
+}],
+"loop": true,
+"name": &"kel",
+"speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg31i"]
+atlas = ExtResource("3_sktk1")
+region = Rect2(416, 224, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp2tt"]
+atlas = ExtResource("3_sktk1")
+region = Rect2(448, 224, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rcpin"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg31i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp2tt")
+}],
+"loop": true,
+"name": &"basil",
+"speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3523h"]
+atlas = ExtResource("3_sktk1")
+region = Rect2(288, 224, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdc2u"]
+atlas = ExtResource("3_sktk1")
+region = Rect2(384, 288, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0lnls"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3523h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdc2u")
+}],
+"loop": true,
+"name": &"hero",
+"speed": 1.0
+}]
+
 [node name="game map" type="Node2D"]
+position = Vector2(0, -1)
 script = ExtResource("1_1ktfh")
 
 [node name="SpaceBackground" type="Sprite2D" parent="."]
@@ -1407,13 +1497,12 @@ autoplay = true
 script = ExtResource("6_3pak0")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(376, 400, 376, 464, 472, 464, 472, 400)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(696, 352, 696, 136, 760, 136, 760, 352, 768, 312, 792, 312, 792, 592, 344, 592, 344, 296, 384, 296, 384, 352, 432, 352, 432, 296, 584, 296, 672, 296, 680, 312, 696, 352, 696, 352, 680, 240, 664, 136, 640, 136, 336, 136, 328, 464, 328, 616, 808, 616, 808, 320, 808, 168, 768, 120, 720, 120, 680, 128)
+polygon = PackedVector2Array(696, 352, 696, 136, 760, 136, 760, 352, 768, 297, 792, 297, 792, 592, 344, 592, 344, 296, 384, 296, 384, 352, 432, 352, 432, 297, 480, 297, 480, 337, 520, 337, 584, 337, 632, 337, 632, 297, 680, 297, 696, 352, 696, 352, 680, 240, 664, 136, 640, 136, 336, 136, 328, 464, 328, 616, 808, 616, 808, 320, 808, 168, 768, 120, 720, 120, 680, 128)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(-9.01682, 9.15527e-05)
@@ -1436,7 +1525,7 @@ position = Vector2(776, 344)
 position = Vector2(384, 560)
 
 [node name="powerup6" parent="." instance=ExtResource("7_xjss1")]
-position = Vector2(576, 328)
+position = Vector2(664, 326)
 
 [node name="powerup7" parent="." instance=ExtResource("7_xjss1")]
 position = Vector2(368, 360)
@@ -1504,6 +1593,48 @@ offset_right = 960.0
 offset_bottom = 71.0
 theme_override_font_sizes/font_size = 40
 metadata/_edit_use_anchors_ = true
+
+[node name="time3" type="Node" parent="CanvasLayer"]
+script = ExtResource("13_wm00t")
+
+[node name="Label" type="Label" parent="CanvasLayer/time3"]
+offset_left = 1736.0
+offset_top = -1.0
+offset_right = 1835.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 50
+text = "0:00"
+
+[node name="Timer" type="Timer" parent="CanvasLayer/time3"]
+wait_time = 25.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(536, 313)
+sprite_frames = SubResource("SpriteFrames_0vwfa")
+animation = &"mari"
+autoplay = "mari"
+frame_progress = 0.245692
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(496, 313)
+sprite_frames = SubResource("SpriteFrames_7mdys")
+animation = &"kel"
+autoplay = "kel"
+frame_progress = 0.119332
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(616, 313)
+sprite_frames = SubResource("SpriteFrames_rcpin")
+animation = &"basil"
+autoplay = "basil"
+frame_progress = 0.245714
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+position = Vector2(576, 313)
+sprite_frames = SubResource("SpriteFrames_0lnls")
+animation = &"hero"
+autoplay = "hero"
+frame_progress = 0.911445
 
 [connection signal="body_entered" from="Sprite2D/porte" to="Sprite2D/porte" method="_on_body_entered"]
 [connection signal="body_entered" from="key" to="." method="_on_key_body_entered"]
