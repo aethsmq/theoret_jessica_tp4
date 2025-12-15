@@ -5,3 +5,6 @@ Comment se déplacer : Utilisez les flèches de votre clavier pour vous déplac
 
 Toutes les cartes sont fortement inspirées du jeu OMORI.
 Toutes les musiques utilisées proviennent du jeu OMORI.
+
+sprites from: https://www.spriters-resource.com/pc_computer/omori/
+music taken from: https://www.youtube.com/@OMOCAT143
